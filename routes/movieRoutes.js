@@ -1,12 +1,8 @@
+import express from 'express';
+import { searchMovies } from '../controllers/movieController.js';
 
-// app.get('/api/search', (req, res) => {
-//     res.body.movieController('Hi!')
-// });
-// app.get('/movies/:id', (req, res) => {
-//     res.body.movieController('')
-// } )
+const router = express.Router();
+router.get('/search', searchMovies);
+router.get('/movies/:id', getMovieDetails);
 
-//
-
-// modules.exports = routes;
-
+export default router;

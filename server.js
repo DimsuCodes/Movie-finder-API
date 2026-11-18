@@ -9,6 +9,6 @@ const port = 3001;
 app.use(express.json());
 
 //post routes
-app.use("/api/search", searchRotes);
+app.use("/api", movieRoutes);
 
  app.listen(port, () => console.log(`http://localhost:${port}`));
